@@ -2,12 +2,13 @@
 import './App.css';
 import hole from './assets/hole.png'
 import mole from './assets/mole.png'
-import {useEffect, useState} from "react";
+import { useRef, useEffect, useState} from "react";
 
 
 function App() {
   const [ score, setScore ] = useState(0);
-  const  [ moles , setMoles ] = useState( new Array(9).fill(false));
+  const [ moles , setMoles ] = useState( new Array(9).fill(false));
+  const [ targetScore, setTargetScore ] = useState(1);
 
 
   function setMoleVisibility (idx, isVisible){
@@ -22,18 +23,26 @@ function App() {
     if(!moles[idx]) return;
     setMoleVisibility(idx,false);
     setScore((score) => score + 1);
-
   }
 
-  useEffect(()=>{
+
+  useEffect(()=> {
     const interval = setInterval(()=>{
       const randomIndex = Math.floor(Math.random() * moles.length);
       setMoleVisibility(randomIndex, true);
       const newMoles = [...moles];
       newMoles[randomIndex] = true;
       setMoles(newMoles);
+
+      if (targetScore < 1){
+        setTargetScore(1);
+      }
+      if (score === targetScore) {
+        alert("You win");
+        setScore(0);
+      }
       setTimeout(()=>{
-        setMoleVisibility(randomIndex,false)
+        setMoleVisibility(randomIndex, false);
       },700)
     },1000);
 
@@ -47,6 +56,10 @@ function App() {
   return (
       <>
         <h1>Score: {score}</h1>
+        <h2> Set Target Score:
+          <input value={targetScore} min="1" className="targetScoreInput" type='text' onChange={(e)=>{ setTargetScore(Number(e.target.value)) }}/>
+
+        </h2>
         <div className="grid">
             {moles.map((isMole, idx) =>{
                return <img
