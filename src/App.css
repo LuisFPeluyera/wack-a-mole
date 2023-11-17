@@ -1,4 +1,7 @@
 
+body {
+  /*background-color: ;*/
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -12,4 +15,11 @@ h1, h2 {
 
 .targetScoreInput {
   width: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #BEF05D;
+  margin-bottom: 150px;
 }
