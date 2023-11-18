@@ -36,7 +36,7 @@ function App() {
 
       if (targetScore < 1){
         alert("Enter a Number between 1 and  ∞ ");
-        setTargetScore(1);
+        setTargetScore(5);
         return;
       }
       if (score === targetScore) {
