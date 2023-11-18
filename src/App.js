@@ -9,6 +9,7 @@ function App() {
   const [ score, setScore ] = useState(0);
   const [ moles , setMoles ] = useState( new Array(9).fill(false));
   const [ targetScore, setTargetScore ] = useState(5);
+  const [ difficulty, setDifficulty ] = useState(700);
 
 
   function setMoleVisibility (idx, isVisible){
@@ -45,13 +46,20 @@ function App() {
       }
       setTimeout(()=>{
         setMoleVisibility(randomIndex, false);
-      },700);
+      },difficulty);
     },1000);
+
 
     return () =>{
       clearInterval(interval);
     }
+
   },[moles]);
+
+  useEffect(()=>{
+    console.log(difficulty);
+  },[difficulty])
+
 
 
 
@@ -59,6 +67,11 @@ function App() {
       <>
         <div className="header">
           <h1>Score: {score}</h1>
+          <div className="difficulty">
+            <a onClick={()=> setDifficulty((prevState)=> 950)} >Easy</a>
+            <a onClick={()=> setDifficulty((prevState) => 700)} >Medium</a>
+            <a onClick={()=> setDifficulty((prevState)=> 500)} >Hard</a>
+          </div>
           <h2> Set Target Score:
             <input value={targetScore} min="1" className="targetScoreInput" type='text' onChange={(e)=>{ setTargetScore(Number(e.target.value)) }}/>
           </h2>
@@ -73,7 +86,10 @@ function App() {
                }}
                />
             })}
+          <div></div>
+          <h3>Difficulty : {(difficulty === 950) ? "Easy" :(difficulty === 700) ? "Medium" : "Hard"} </h3>
         </div>
+
       </>
   );
 }
