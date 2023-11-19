@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# React Whack-a-Mole Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the React Whack-a-Mole game! This is a fun and interactive game built using React, challenging players to test their reflexes by whacking moles as they pop up from their holes. This README provides essential information on setting up and playing the game.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Getting Started](#getting-started)
+2. [Installation](#installation)
+3. [Gameplay](#gameplay)
+4. [Folder Structure](#folder-structure)
+5. [Components](#components)
+6. [Game Logic](#game-logic)
+7. [Customization](#customization)
+8. [Technical Requirements](#technical-requirements)
+9. [Contributing](#contributing)
+10. [License](#license)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started with the React Whack-a-Mole game, follow the installation instructions below.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository to your local machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone https://github.com/LuisFPeluyera/react-whack-a-mole.git
+    ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    cd react-whack-a-mole
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+4. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to play the game.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Gameplay
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The objective of the game is to whack as many moles as possible within the given time limit. Moles will randomly pop up from their holes, and your task is to click on them before they disappear.
 
-## Learn More
+## Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project follows a standard React folder structure:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src`: Contains the source code.
+    - `components`: React components for the game.
+    - `styles`: CSS styles for the components.
+    - `App.js`: Main application component.
+    - `index.js`: Entry point for the application.
 
-### Code Splitting
+## Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The game is divided into several components for better organization:
 
-### Analyzing the Bundle Size
+- `Mole`: Represents a mole that pops up from a hole.
+- `Game`: Manages the game state and logic.
+- `Scoreboard`: Displays the player's score and other game information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Game Logic
 
-### Making a Progressive Web App
+The game logic is handled in the `Game` component. It manages mole appearance, player input, scoring, and game over conditions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Customization
 
-### Advanced Configuration
+Feel free to customize the game by adjusting the following:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Mole appearance frequency.
+- Time limit.
+- Game difficulty.
 
-### Deployment
+Customization options can be found in the `Game` component or a dedicated configuration file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Technical Requirements
 
-### `npm run build` fails to minify
+- Compatible with modern web browsers (Chrome, Firefox, Safari, etc.).
+- Node.js and npm installed for development.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributing
+
+Contributions are welcome! If you find a bug or have an enhancement in mind, please submit an issue or create a pull request.
+
+## License
+
+This React Whack-a-Mole game is licensed under the [MIT License](LICENSE). Enjoy the game! If you have any questions or feedback, feel free to reach out.
