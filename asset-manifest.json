@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/whack-a-mole2.0/static/css/main.22de9bb3.css",
+    "main.js": "/whack-a-mole2.0/static/js/main.9777253e.js",
+    "static/js/787.97764779.chunk.js": "/whack-a-mole2.0/static/js/787.97764779.chunk.js",
+    "static/media/mole.png": "/whack-a-mole2.0/static/media/mole.0b1120f04619f13666dc.png",
+    "static/media/hole.png": "/whack-a-mole2.0/static/media/hole.1e3775925118266376bf.png",
+    "index.html": "/whack-a-mole2.0/index.html",
+    "main.22de9bb3.css.map": "/whack-a-mole2.0/static/css/main.22de9bb3.css.map",
+    "main.9777253e.js.map": "/whack-a-mole2.0/static/js/main.9777253e.js.map",
+    "787.97764779.chunk.js.map": "/whack-a-mole2.0/static/js/787.97764779.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22de9bb3.css",
+    "static/js/main.9777253e.js"
+  ]
+}
